@@ -707,7 +707,7 @@ define(['ash',
 							sys.playerStatsNodes.head.stamina.stamina += PlayerStatConstants.STAMINA_GAINED_FROM_NAP;
 						},
 					);
-				}, 300);
+				}, 3);
 			});
 		},
 
