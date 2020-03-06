@@ -89,7 +89,9 @@ define([
             }
 			staminaComponent.stamina += time * staminaPerSec;
 			staminaComponent.accumulation = staminaPerSec;
-            
+            if (staminaComponent.stamina < maxVal){
+	    staminaComponent. stamina = maxVal
+	    }
 			if (staminaComponent.stamina > maxVal) {
 				staminaComponent.stamina = maxVal;
 			}
