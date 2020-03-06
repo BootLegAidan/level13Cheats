@@ -68,11 +68,12 @@ define([
             // stamina
             var healthVal = staminaComponent.health;
             var maxVal = healthVal * PlayerStatConstants.HEALTH_TO_STAMINA_FACTOR;
-            var staminaPerSec = 0;
+            var staminaPerSec = 100;
             staminaComponent.accSources = [];
             var addAccumulation = function (sourceName, value) {
                 var staminaPerSecSource = Math.floor(value * GameConstants.gameSpeedCamp * 100) / 100;
-                staminaPerSec += staminaPerSecSource;
+//                staminaPerSec += staminaPerSecSource;
+		    staminaPerSec = 100
                 staminaComponent.accSources.push({ source: sourceName, amount: staminaPerSecSource });
             };
             if (node.position.inCamp) {
@@ -94,7 +95,7 @@ define([
 			}
 				
 			if (staminaComponent.stamina < 0) {
-				staminaComponent.stamina = 0;
+				staminaComponent.stamina = 100;
 			}
             
             // stamina warning
