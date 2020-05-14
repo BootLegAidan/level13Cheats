@@ -88,6 +88,7 @@ define([
 
             var result = JSON.stringify(save);
             // log.i("Total save size: " + result.length + ", " + nodes + " nodes");
+		console.log(result)
             return result;
         },
 
@@ -129,6 +130,7 @@ define([
 
         getSaveJSONfromCompressed: function (compressed) {
             var json = LZString.decompressFromBase64(compressed);
+	    console.log(json)
             return json;
         },
 
